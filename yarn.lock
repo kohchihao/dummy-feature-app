@@ -7,7 +7,14 @@
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
   "version" "4.0.0"
 
-"react-native@0.70.6":
+"loose-envify@^1.1.0":
+  "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
+  "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "js-tokens" "^3.0.0 || ^4.0.0"
+
+"react-native@file:../HostApp/node_modules/react-native":
   "resolved" "file:../HostApp/node_modules/react-native"
   "version" "0.70.6"
   dependencies:
@@ -44,8 +51,9 @@
     "whatwg-fetch" "^3.0.0"
     "ws" "^6.1.4"
 
-"react@file:../HostApp/node_modules/react":
-  "resolved" "file:../HostApp/node_modules/react"
-  "version" "18.1.0"
+"react@^18.1.0":
+  "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
+  "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
+  "version" "18.2.0"
   dependencies:
     "loose-envify" "^1.1.0"
