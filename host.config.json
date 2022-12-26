@@ -1,0 +1,4 @@
+{
+  "path": "../HostApp",
+  "symlinks": ["react", "react-native"]
+}
