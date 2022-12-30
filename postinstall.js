@@ -1,10 +1,10 @@
-// 'use strict';
+'use strict';
 
-// const fs = require('fs');
-// const { exec } = require('child_process');
-// let rawdata = fs.readFileSync('host.config.json');
-// let hostConfig = JSON.parse(rawdata);
-// console.log(hostConfig);
+const fs = require('fs');
+const { exec } = require('child_process');
+let rawdata = fs.readFileSync('host.config.json');
+let hostConfig = JSON.parse(rawdata);
+console.log(hostConfig);
 
 // if (fs.existsSync(hostConfig.path)) {
 //   console.log('Host Directory exists!');
@@ -31,3 +31,20 @@
 //   console.log('Host Directory not found.');
 //   return;
 // }
+
+// symlink "Feature" to "HostApp/node_modules"
+const symlinkCmd = `ln -sf $(pwd) ${hostConfig.path}/node_modules/`;
+
+exec(symlinkCmd, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`error: ${error.message}`);
+    return;
+  }
+
+  if (stderr) {
+    console.error(`stderr: ${stderr}`);
+    return;
+  }
+
+  console.log(`stdout:\n${stdout}`);
+});

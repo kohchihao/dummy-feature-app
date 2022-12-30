@@ -1,4 +1,3 @@
 {
-  "path": "../HostApp",
-  "symlinks": ["react", "react-native"]
+  "path": "../HostApp"
 }
